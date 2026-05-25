@@ -66,7 +66,7 @@ const Experience = () => {
     <>
       <Header useMotion={true} {...config.sections.experience} />
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-20 flex flex-col overflow-hidden">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />

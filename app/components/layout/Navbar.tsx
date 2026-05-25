@@ -28,7 +28,7 @@ const Navbar = () => {
       }`}
     >
       {/* 2. max-w-7xl + mx-auto CENTRA todo el contenido de forma constante */}
-      <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6">
         
         <Link
           href="/"
@@ -66,12 +66,16 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Menu desplegable móvil fuera del contenedor para no afectar el flujo */}
+      {/* Menu desplegable movil */}
       {toggle && (
-        <div className="sm:hidden absolute top-20 right-6 p-6 black-gradient rounded-xl z-10">
-          <ul className="flex flex-col gap-4 list-none items-start">
+        <div className="absolute right-4 top-20 z-10 rounded-xl p-6 black-gradient sm:hidden">
+          <ul className="flex list-none flex-col items-start gap-4">
             {navLinks.map((nav) => (
-              <li key={nav.id} className="text-secondary text-[16px] cursor-pointer" onClick={() => setToggle(false)}>
+              <li
+                key={nav.id}
+                className="cursor-pointer text-[16px] text-secondary transition-colors hover:text-white"
+                onClick={() => setToggle(false)}
+              >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}

@@ -8,7 +8,7 @@ import { config } from "@/app/constants/config";
 
 const Hero = () => {
   return (
-    <section className={`relative mx-auto h-screen w-full`}>
+    <section className="relative mx-auto h-screen w-full overflow-hidden">
       <div
         className={`absolute inset-0 top-[120px] mx-auto max-w-7xl ${styles.paddingX} flex flex-row items-start gap-5`}
       >
